@@ -1,7 +1,75 @@
+
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+
+
 local Testing = false
 -- Cmds
 if table.find(getgenv().Alts,game.Players.LocalPlayer.UserId) then
 	getgenv().PointInTable = table.find(getgenv().Alts,game.Players.LocalPlayer.UserId)
+	if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+settings().Physics.PhysicsEnvironmentalThrottle = 1
+settings().Rendering.QualityLevel = 'Level01'
+for i,v in pairs(game:GetDescendants()) do
+    if v:IsA("Part") then
+        v.Material = Enum.Material.Pavement
+        v.Transparency = 1
+    elseif v:IsA("Decal") then
+        v:Destroy()
+    elseif v:IsA("Texture") then
+        v:Destroy()
+    elseif v:IsA("MeshPart") then
+        v.TextureID = 0
+        v.Transparency = 1
+    elseif v.Name == "Terrian" then
+        v.WaterReflectace = 1
+        v.WaterTransparency = 1
+    elseif v:IsA("SpotLight") then
+        v.Range = 0
+        v.Enabled = false
+    elseif v:IsA("WedgePart") then
+        v.Transparency = 1
+    elseif v:IsA("UnionOperation") then
+        v.Transparency = 1
+    end
+end
 else
 	return
 end
@@ -51,7 +119,7 @@ if Testing == false then
 		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 	end)
 	game:GetService("RunService"):Set3dRenderingEnabled(false)
-	setfpscap(1)
+	setfpscap(3)
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MsorkyScripts/OpenSourceAntiCheat/main/AntiCheatBypass.txt"))()
@@ -437,57 +505,13 @@ local function Initiate()
 						CmdSettings[Var] = nil
 					end
 					CmdSettings = {}
-					setfpscap(60)
+					setfpscap(10)
 					wait(1)
-					setfpscap(60)
+					setfpscap(10)
 					wait(1)
-					setfpscap(60)
+					setfpscap(10)
 					wait(1)
-					setfpscap(60)	
-				end
-			elseif Args[1] == ".crash" and Args[2] == "encrypt" and not Crashed then
-				local Player = GetPlayerFromString(Args[3],true)
-				if Player and Player == game.Players.LocalPlayer then
-					if game.CoreGui:FindFirstChild("RenderScreen") then
-						game.CoreGui.RenderScreen:Destroy()
-					end
-					game:GetService("RunService"):Set3dRenderingEnabled(true)
-					Crashed = true
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/remorseW/encryptW/main/CustomEncryptCrasher.lua"))()
-
-					for Index,Var in pairs(CmdSettings) do
-						CmdSettings[Var] = nil
-					end
-					CmdSettings = {}
-					setfpscap(60)
-					wait(1)
-					setfpscap(60)
-					wait(1)
-					setfpscap(60)
-					wait(1)
-					setfpscap(60)	
-				end
-			elseif Args[1] == ".crash" and Args[2] == "15min" and not Crashed then
-				local Player = GetPlayerFromString(Args[3],true)
-				if Player and Player == game.Players.LocalPlayer then
-					if game.CoreGui:FindFirstChild("RenderScreen") then
-						game.CoreGui.RenderScreen:Destroy()
-					end
-					game:GetService("RunService"):Set3dRenderingEnabled(true)
-					Crashed = true
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/remorseW/encryptW/main/DahooSuperQuickCrash.lua"))()
-
-					for Index,Var in pairs(CmdSettings) do
-						CmdSettings[Var] = nil
-					end
-					CmdSettings = {}
-					setfpscap(60)
-					wait(1)
-					setfpscap(60)
-					wait(1)
-					setfpscap(60)
-					wait(1)
-					setfpscap(60)	
+					setfpscap(10)	
 				end
 			elseif Args[1] == ".stop" then
 			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('end', 'All');
@@ -523,6 +547,26 @@ local function Initiate()
 				if FoundPlayer then
 					BringPlr(FoundPlayer,nil)
 				end
+			elseif Message == ".fps 10" then
+			    setfpscap(10)
+			elseif Message == ".fps 9" then
+			    setfpscap(9)
+			elseif Message == ".fps 8" then
+			    setfpscap(8)
+			elseif Message == ".fps 7" then
+			    setfpscap(7)
+			elseif Message == ".fps 6" then
+			    setfpscap(6)
+			elseif Message == ".fps 5" then
+			    setfpscap(5)
+			elseif Message == ".fps 4" then
+			    setfpscap(4)
+			elseif Message == ".fps 3" then
+			    setfpscap(3)
+			elseif Message == ".fps 2" then
+			    setfpscap(2)
+			elseif Message == ".fps 1" then
+			    setfpscap(1)
 			elseif Message == ".setup bank" then
 				Setup("Bank")
 			elseif Message == ".setup admin" then
@@ -565,7 +609,7 @@ local function Initiate()
 				elseif c:FindFirstChild("Mask") then
 					c.Mask:Activate()
 				end
-			elseif Args[1] == ".aura" then
+			elseif Args[1] == ".dupe" then
 				local Player = GetPlayerFromString(Args[2],true)
 				if Player and Player == game.Players.LocalPlayer then
 					if CmdSettings["Aura"] == nil then
@@ -573,7 +617,7 @@ local function Initiate()
 						CmdSettings["Aura"] = true
 						CmdSettings["Dropping"] = nil
 						CmdSettings["CustomDrop"] = nil
-
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('duping in progress', 'All'); 
 						while CmdSettings["Aura"] == true and DropFolder do
 							if DropFolder then
 								for i,v in pairs(DropFolder:GetChildren()) do
@@ -591,7 +635,8 @@ local function Initiate()
 						end
 					end
 				end
-			elseif Args[1] == ".stopaura" then
+			elseif Args[1] == ".stop" then
+			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('duping stopped', 'All'); 
 				CmdSettings["Aura"] = nil
 			elseif Args[1] == ".cdrop" and Args[2] ~= nil and not CmdSettings["CustomDrop"] then
 				local Number = GetNumberFromText(Args[2]) 
@@ -611,8 +656,9 @@ local function Initiate()
 						10000
 					)
 					CmdSettings["CustomDrop"] = true
+					game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('started', 'All'); 
 					coroutine.wrap(function()
-						repeat wait(2.5) 	
+						repeat wait() 	
 							game.ReplicatedStorage.MainEvent:FireServer(
 								"DropMoney",
 								10000
@@ -646,7 +692,7 @@ if Host then
 end
 
 Services["Players"].PlayerAdded:Connect(function(Player)
-	if Player.Name == Variables["Host"] and Player:IsInGroup(13288921) and Player:GetRankInGroup(13288921) == 2 then
+	if Player.Name == Variables["Host"] and Player:IsInGroup(4636216) and Player:GetRankInGroup(4636216) == 2 then
 		Initiate()
 	end
 end)
