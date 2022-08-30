@@ -51,7 +51,7 @@ if Testing == false then
 		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 	end)
 	game:GetService("RunService"):Set3dRenderingEnabled(false)
-	setfpscap(0.5)
+	setfpscap(1)
 end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MsorkyScripts/OpenSourceAntiCheat/main/AntiCheatBypass.txt"))()
@@ -542,7 +542,7 @@ local function Initiate()
 				local OldCF = Root.CFrame
 
 				local Tries = 0 
-				repeat wait(0.1) Tries += 1
+				repeat wait(0.1) Tries = 1
 					Root.CFrame = workspace.Ignored.Shop["[Surgeon Mask] - $25"].Head.CFrame*CFrame.new(math.random(-1,1),0,math.random(-1,1))
 					fireclickdetector(workspace.Ignored.Shop["[Surgeon Mask] - $25"].ClickDetector)
 				until Tries >= 50 or not c or not c:FindFirstChild("Humanoid") or c:FindFirstChild"Mask" or plr.Backpack:FindFirstChild"Mask"
@@ -603,7 +603,7 @@ local function Initiate()
 					for i,v in pairs(DropFolder:GetChildren()) do
 						if v.Name == "MoneyDrop" then
 							local numbers = string.gsub(v.BillboardGui.TextLabel.Text, "%D", "")
-							OldMoney += numbers
+							OldMoney = numbers
 						end
 					end
 					game.ReplicatedStorage.MainEvent:FireServer(
@@ -623,7 +623,7 @@ local function Initiate()
 								for i,v in pairs(DropFolder:GetChildren()) do
 									if v.Name == "MoneyDrop" then
 										local numbers = string.gsub(v.BillboardGui.TextLabel.Text, "%D", "")
-										Money += numbers
+										Money = numbers
 									end
 								end 
 							end
@@ -649,5 +649,4 @@ Services["Players"].PlayerAdded:Connect(function(Player)
 	if Player.Name == Variables["Host"] and Player:IsInGroup(13288921) and Player:GetRankInGroup(13288921) == 2 then
 		Initiate()
 	end
-end
 end)
