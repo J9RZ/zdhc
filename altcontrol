@@ -190,11 +190,6 @@ local function AirLock(Type)
 			BP:Destroy()
 		end
 		CmdSettings["AirLock"] = true
-		local Anim = Instance.new("Animation")
-	Anim.AnimationId = "http://www.roblox.com/asset/?id=3541114300"
-	CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
-	CurrAnim:Play()
-	CurrAnim:AdjustSpeed()
 		Variables["Player"].Character.HumanoidRootPart.CFrame = Variables["Player"].Character.HumanoidRootPart.CFrame*CFrame.new(0,10,0)
 		local BP = Instance.new("BodyPosition",Variables["Player"].Character.HumanoidRootPart)
 		BP.Name = "AirLockBP"
