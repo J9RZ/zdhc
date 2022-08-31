@@ -101,7 +101,7 @@ if Testing == false then
 	TextLabel.Position = UDim2.new(0.5, 0, 0.419999987, 0)
 	TextLabel.Size = UDim2.new(0, 279, 0, 34)
 	TextLabel.Font = Enum.Font.GothamBlack
-	TextLabel.Text = "ZDHC Premium"..game.Players.LocalPlayer.Name
+	TextLabel.Text = "Premium ZDHC (new name soon) Welcome, "..game.Players.LocalPlayer.Name
 	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel.TextScaled = false
 	TextLabel.TextSize = 25.000
@@ -157,7 +157,7 @@ local function Drop(Type)
 				[2] = "10000"
 			}
 			game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-			wait()
+			wait(2.5)
 		end
 	elseif Type == false then
 		CmdSettings["Dropping"] = nil
@@ -269,11 +269,10 @@ local function BringPlr(Target,POS)
 end
 
 local BringLocations = {
-	["bank"] = CFrame.new(-396.988922, 21.7570763, -293.929779, -0.102468058, -1.9584887e-09, -0.994736314, 7.23731564e-09, 1, -2.71436984e-09, 0.994736314, -7.47735651e-09, -0.102468058),
-	["admin"] = CFrame.new(-872.453674, -32.6421318, -532.476379, 0.999682248, -1.36019978e-08, 0.0252073351, 1.33811247e-08, 1, 8.93094043e-09, -0.0252073351, -8.59080007e-09, 0.999682248),
-	["klub"] = CFrame.new(-264.434479, 0.0355005264, -430.854736, -0.999828756, 9.58909574e-09, -0.0185054261, 9.92017934e-09, 1, -1.77993904e-08, 0.0185054261, -1.79799198e-08, -0.999828756),	
-	["vault"] = CFrame.new(-495.485901, 23.1428547, -284.661713, -0.0313318223, -4.10440322e-08, 0.999509037, 2.18453966e-08, 1, 4.17489829e-08, -0.999509037, 2.31427428e-08, -0.0313318223),
-	["train"] = CFrame.new(591.396118, 34.5070686, -146.159561, 0.0698467195, -4.91725913e-08, -0.997557759, 5.03374231e-08, 1, -4.57684664e-08, 0.997557759, -4.70177071e-08, 0.0698467195),	
+	["bank"] = CFrame.new(-377.864441, 21.2499943, -353.574799, 0.99999994, 5.13736076e-08, 0.000373064715, -5.13650917e-08, 1, -2.28348203e-08, -0.000373064715, 2.28156551e-08, 0.99999994),
+	["admin"] = CFrame.new(-871.531372, -32.6492119, -655.763855, 0.99982965, 8.19479595e-08, -0.0184579957, -8.21120594e-08, 1, -8.13280376e-09, 0.0184579957, 9.64704228e-09, 0.99982965),
+	["club"] = CFrame.new(-264.883209, 0.0280604362, -427.310455, 0.999879837, -6.42311235e-08, -0.0155024109, 6.49000995e-08, 1, 4.26501146e-08, 0.0155024109, -4.36510987e-08, 0.999879837),	
+	["school"] = CFrame.new(-680.161987, 21.7480183, 238.996002, 0.999940932, -1.03277804e-08, -0.0108703291, 1.09068363e-08, 1, 5.32101083e-08, 0.0108703291, -5.33255253e-08, 0.999940932),	
 }
 
 local SetupsTable = {
@@ -285,33 +284,26 @@ local SetupsTable = {
 		Rows = 4,
 	},
 	Admin = {
-		Origin = CFrame.new(-884.12915, -38.3972931, -545.291809, -0.99998939, 2.69316498e-08, -0.00460755778, 2.6944301e-08, 1, -2.68358624e-09, 0.00460755778, -2.80770518e-09, -0.99998939),
+		Origin = CFrame.new(-909.99823, -39.4068527, -555.992859, 1, 0, 0, 0, 1, 0, 0, 0, 1),
 		ZMultiplier = 3,
 		XMultiplier = 8,
 		PerRow = 10,
 		Rows = 4,
 	},
-	Klub = {
-		Origin = CFrame.new(-237.016571, -4.87585974, -411.940063, 0.994918466, -1.5840282e-08, -0.100683607, 6.8329018e-09, 1, -8.9807088e-08, 0.100683607, 8.86627731e-08, 0.994918466),
+	Club = {
+		Origin = CFrame.new(-282.995026, -6.20834732, -399.547882, 0.99999696, -6.7942409e-08, 0.00247257203, 6.79165311e-08, 1, 1.05499378e-08, -0.00247257203, -1.03819771e-08, 0.99999696),
 		ZMultiplier = 6,
 		XMultiplier = -12,
 		PerRow = 10,
 		Rows = 4,
 	},
-	Vault = {
-		Origin = CFrame.new(-519.201355, 23.1994667, -292.362, -0.0597927198, 6.70288927e-08, -0.998210788, 2.96872589e-08, 1, 6.53707701e-08, 0.998210788, -2.57254467e-08, -0.0597927198),
-		ZMultiplier = -2.5,
-		XMultiplier = 4,
+	School = {
+		Origin = CFrame.new(-649.818726, 21.2499924, 207.24736, -0.999973357, -1.10295337e-08, -0.0072997543, -1.11321805e-08, 1, 1.40211371e-08, 0.0072997543, 1.41020262e-08, -0.999973357),
+		ZMultiplier = 4,
+		XMultiplier = 9,
 		PerRow = 10,
 		Rows = 4,
-	},
-	Train = {
-		Origin = CFrame.new(606.527588, 34.5070801, -159.083542, 0.0376962014, -7.60452892e-08, 0.999289274, 6.54496404e-08, 1, 7.36304173e-08, -0.999289274, 6.26275352e-08, 0.0376962014),
-		ZMultiplier = 5,
-		XMultiplier = -7,
-		PerRow = 10,
-		Rows = 4,
-	}
+},
 }
 local function Setup(Type,Debugmode)
 	CmdSettings["Aura"] = nil
@@ -460,7 +452,7 @@ local function Initiate()
 				CmdSettings["AdOn"] = true
 				while CmdSettings["AdOn"] do
 					game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(newStr, 'All'); 
-					wait()	
+					wait(1.5)	
 				end
 			elseif Message == ".advert off" then				
 				CmdSettings["AdOn"] = nil
@@ -469,18 +461,6 @@ local function Initiate()
 					DropFolder:Destroy()
 					DropFolder = nil
 				end
-			elseif Message == ".block" then
-			    local args = {
-			        "Block"
-			        true
-			    }
-			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-			elseif Message == ".unblock" then
-			    local args = {
-			        "Block"
-			        true
-			    }
-			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
 			elseif Message == ".host circle" and Host and Host.Character and Host.Character:FindFirstChild("Humanoid") and Host.Character.Humanoid.Health > 0 then
 				local angle = 0
 				local cfr = Host.Character.HumanoidRootPart.CFrame*CFrame.new(0,1,0)
@@ -543,10 +523,30 @@ local function Initiate()
 					Variables["Player"].Character:Destroy()
 				end
 				Initiate()
-		elseif Args[1] == ".airlock" then
+			elseif Args[1] == ".airlock" then
 				AirLock(true)
-		elseif Args[1] == ".unlock" then
+			elseif Args[1] == ".unlock" then
 				AirLock(false)
+			elseif Message == ".fps 10" then
+			    setfpscap(10)
+			elseif Message == ".fps 9" then
+			    setfpscap(9)
+			elseif Message == ".fps 8" then
+			    setfpscap(8)
+		    elseif Message == ".fps 7" then
+			    setfpscap(7)
+			elseif Message == ".fps 6" then
+			    setfpscap(6)
+			elseif Message == ".fps 5" then
+			    setfpscap(5)
+			elseif Message == ".fps 4" then
+			    setfpscap(4)
+			elseif Message == ".fps 3" then
+			    setfpscap(3)
+			elseif Message == ".fps 2" then
+			    setfpscap(2)
+			elseif Message == ".fps 1" then
+			    setfpscap(1)
 			elseif Message == ".bring" then
 				-- didnt feel the need for a function lmao
 				if Host and Host.Character and Host.Character:FindFirstChild("HumanoidRootPart") then
@@ -564,63 +564,20 @@ local function Initiate()
 				if FoundPlayer then
 					BringPlr(FoundPlayer,nil)
 				end
-			elseif Message == ".fps 10" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 10', 'All');
-			    setfpscap(10)
-			elseif Message == ".fps 9" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 9', 'All');
-			    setfpscap(9)
-			elseif Message == ".fps 8" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 8', 'All');
-			    setfpscap(8)
-			elseif Message == ".fps 7" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 7', 'All');
-			    setfpscap(7)
-			elseif Message == ".fps 6" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 6', 'All');
-			    setfpscap(6)
-			elseif Message == ".fps 5" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 5', 'All');
-			    setfpscap(5)
-			elseif Message == ".fps 4" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 4', 'All');
-			    setfpscap(4)
-			elseif Message == ".fps 3" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 3', 'All');
-			    setfpscap(3)
-			elseif Message == ".fps 2" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 2', 'All');
-			    setfpscap(2)
-			elseif Message == ".fps 1" then
-			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('FPS = 1', 'All'); 
-			    setfpscap(1)
 			elseif Message == ".setup bank" then
 				Setup("Bank")
 			elseif Message == ".setup admin" then
 				Setup("Admin")
-			elseif Message == ".setup club" then
+			elseif Message == ".setup Club" then
 				Setup("Club")
-			elseif Message == ".setup train" then
-				Setup("Train")
+				Setup("Vault")
+			elseif Message == ".setup school" then
+				Setup("School")
 			elseif Message == ".wallet show" then
 				ShowWallet()
 			elseif Message == ".wallet hide" then
 				RemoveWallet()
-			elseif Message == ".vibe" then
-				if CurrAnim and CurrAnim.IsPlaying then
-					CurrAnim:Stop()
-				end
-				local Anim = Instance.new("Animation")
-				Anim.AnimationId = "http://www.roblox.com/asset/?id=10370918044"
-				CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
-				CurrAnim:Play()
-				CurrAnim:AdjustSpeed()
-
-			elseif Message == ".stop" then
-				if CurrAnim and CurrAnim.IsPlaying then
-					CurrAnim:Stop()
-				end
-			elseif Message == ".mask" then
+			elseif Message == ".mask on" then
 				local plr = game.Players.LocalPlayer
 				local c = plr.Character
 				local Root = c.PrimaryPart
@@ -639,7 +596,7 @@ local function Initiate()
 					c.Mask:Activate()
 				end
 				Root.CFrame = OldCF
-			elseif Message == ".maskoff" then
+			elseif Message == ".mask off" then
 				local plr = game.Players.LocalPlayer
 				local c = plr.Character
 				local Root = c.PrimaryPart
@@ -650,7 +607,7 @@ local function Initiate()
 				elseif c:FindFirstChild("Mask") then
 					c.Mask:Activate()
 				end
-			elseif Args[1] == ".caura" then
+			elseif Args[1] == ".aura" then
 				local Player = GetPlayerFromString(Args[2],true)
 				if Player and Player == game.Players.LocalPlayer then
 					if CmdSettings["Aura"] == nil then
@@ -676,13 +633,14 @@ local function Initiate()
 						end
 					end
 				end
-			elseif Args[1] == ".stopcaura" then
+			elseif Args[1] == ".stopaura" then
 				CmdSettings["Aura"] = nil
 			elseif Args[1] == ".cdrop" and Args[2] ~= nil and not CmdSettings["CustomDrop"] then
 				local Number = GetNumberFromText(Args[2]) 
 				if Number and DropFolder then
 					CmdSettings["Aura"] = nil
 					CmdSettings["Dropping"] = false
+
 					local OldMoney = 0
 					for i,v in pairs(DropFolder:GetChildren()) do
 						if v.Name == "MoneyDrop" then
@@ -695,9 +653,8 @@ local function Initiate()
 						10000
 					)
 					CmdSettings["CustomDrop"] = true
-					game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Custom Drop has finished.', 'All'); 
 					coroutine.wrap(function()
-						repeat wait() 
+						repeat wait(2.5) 	
 							game.ReplicatedStorage.MainEvent:FireServer(
 								"DropMoney",
 								10000
@@ -717,7 +674,7 @@ local function Initiate()
 						if CmdSettings["CustomDrop"] then
 							CmdSettings["CustomDrop"] = nil
 							CmdSettings["Dropping"] = nil
-							game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('ended', 'All'); 
+							game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Custom Drop has finished.', 'All'); 
 						end
 					end)()
 				end
@@ -731,7 +688,7 @@ if Host then
 end
 
 Services["Players"].PlayerAdded:Connect(function(Player)
-	if Player.Name == Variables["HostUser"] and Player:IsInGroup(4636216) and Player:GetRankInGroup(4636216) == 2 then
+	if Player.Name == Variables["HostUser"] then
 		Initiate()
 	end
 end)
