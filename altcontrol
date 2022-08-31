@@ -35,13 +35,11 @@ for i, e in pairs(l:GetChildren()) do
         e.Enabled = false
     end
 end
-
-
 local Testing = false
 -- Cmds
 if table.find(getgenv().Alts,game.Players.LocalPlayer.UserId) then
 	getgenv().PointInTable = table.find(getgenv().Alts,game.Players.LocalPlayer.UserId)
-  if not game:IsLoaded() then
+	if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 settings().Physics.PhysicsEnvironmentalThrottle = 1
@@ -102,11 +100,11 @@ if Testing == false then
 	TextLabel.BackgroundTransparency = 1.000
 	TextLabel.Position = UDim2.new(0.5, 0, 0.419999987, 0)
 	TextLabel.Size = UDim2.new(0, 279, 0, 34)
-	TextLabel.Font = Enum.Font.Gotham
-	TextLabel.Text = "Premium .gg/zdhc"..game.Players.LocalPlayer.Name
+	TextLabel.Font = Enum.Font.GothamBlack
+	TextLabel.Text = "ZDHC Premium"..game.Players.LocalPlayer.Name
 	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel.TextScaled = false
-	TextLabel.TextSize = 19.000
+	TextLabel.TextSize = 25.000
 	TextLabel.TextWrapped = false
 	if not game:IsLoaded() then
 		repeat wait(.1) until game:IsLoaded() 
@@ -128,8 +126,6 @@ getgenv().Executed = true
 
 local Connections = {}
 
-
-
 local Services = {
 	["RP"] = game:GetService("ReplicatedStorage"),
 	["Players"] = game:GetService("Players"),
@@ -149,20 +145,6 @@ if not Host then
 end
 print("Script loaded!")
 local CmdSettings = {}
-
-local function Block(Type)
-	if Type == true and CmdSettings["Blocking"] == nil then
-		CmdSettings["Blocking"] = true
-		CmdSettings["CustomDrop"] = nil
-		CmdSettings["Aura"] = nil
-		while CmdSettings["Blocking"] do
-			local args = {
-				[1] = "Block",
-				[2] = true
-			}
-			game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-			wait()
-		end
 
 local function Drop(Type)
 	if Type == true and CmdSettings["Dropping"] == nil then
@@ -287,9 +269,10 @@ local function BringPlr(Target,POS)
 end
 
 local BringLocations = {
-	["bank"] = CFrame.new(-377.864441, 21.2499943, -353.574799, 0.99999994, 5.13736076e-08, 0.000373064715, -5.13650917e-08, 1, -2.28348203e-08, -0.000373064715, 2.28156551e-08, 0.99999994),
-	["admin"] = CFrame.new(-871.531372, -32.6492119, -655.763855, 0.99982965, 8.19479595e-08, -0.0184579957, -8.21120594e-08, 1, -8.13280376e-09, 0.0184579957, 9.64704228e-09, 0.99982965),
-	["club"] = CFrame.new(-264.883209, 0.0280604362, -427.310455, 0.999879837, -6.42311235e-08, -0.0155024109, 6.49000995e-08, 1, 4.26501146e-08, 0.0155024109, -4.36510987e-08, 0.999879837),	
+	["bank"] = CFrame.new(-396.988922, 21.7570763, -293.929779, -0.102468058, -1.9584887e-09, -0.994736314, 7.23731564e-09, 1, -2.71436984e-09, 0.994736314, -7.47735651e-09, -0.102468058),
+	["admin"] = CFrame.new(-872.453674, -32.6421318, -532.476379, 0.999682248, -1.36019978e-08, 0.0252073351, 1.33811247e-08, 1, 8.93094043e-09, -0.0252073351, -8.59080007e-09, 0.999682248),
+	["klub"] = CFrame.new(-264.434479, 0.0355005264, -430.854736, -0.999828756, 9.58909574e-09, -0.0185054261, 9.92017934e-09, 1, -1.77993904e-08, 0.0185054261, -1.79799198e-08, -0.999828756),	
+	["vault"] = CFrame.new(-495.485901, 23.1428547, -284.661713, -0.0313318223, -4.10440322e-08, 0.999509037, 2.18453966e-08, 1, 4.17489829e-08, -0.999509037, 2.31427428e-08, -0.0313318223),
 	["train"] = CFrame.new(591.396118, 34.5070686, -146.159561, 0.0698467195, -4.91725913e-08, -0.997557759, 5.03374231e-08, 1, -4.57684664e-08, 0.997557759, -4.70177071e-08, 0.0698467195),	
 }
 
@@ -302,21 +285,28 @@ local SetupsTable = {
 		Rows = 4,
 	},
 	Admin = {
-		Origin = CFrame.new(-909.99823, -39.4068527, -555.992859, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+		Origin = CFrame.new(-884.12915, -38.3972931, -545.291809, -0.99998939, 2.69316498e-08, -0.00460755778, 2.6944301e-08, 1, -2.68358624e-09, 0.00460755778, -2.80770518e-09, -0.99998939),
 		ZMultiplier = 3,
 		XMultiplier = 8,
 		PerRow = 10,
 		Rows = 4,
 	},
-	Club = {
-		Origin = CFrame.new(-282.995026, -6.20834732, -399.547882, 0.99999696, -6.7942409e-08, 0.00247257203, 6.79165311e-08, 1, 1.05499378e-08, -0.00247257203, -1.03819771e-08, 0.99999696),
+	Klub = {
+		Origin = CFrame.new(-237.016571, -4.87585974, -411.940063, 0.994918466, -1.5840282e-08, -0.100683607, 6.8329018e-09, 1, -8.9807088e-08, 0.100683607, 8.86627731e-08, 0.994918466),
 		ZMultiplier = 6,
 		XMultiplier = -12,
 		PerRow = 10,
 		Rows = 4,
 	},
+	Vault = {
+		Origin = CFrame.new(-519.201355, 23.1994667, -292.362, -0.0597927198, 6.70288927e-08, -0.998210788, 2.96872589e-08, 1, 6.53707701e-08, 0.998210788, -2.57254467e-08, -0.0597927198),
+		ZMultiplier = -2.5,
+		XMultiplier = 4,
+		PerRow = 10,
+		Rows = 4,
+	},
 	Train = {
-		Origin = CFrame.new(565.501526, 34.4999924, -110.471985, -0.417713165, -3.83276628e-08, -0.908578932, -7.83112881e-08, 1, -6.18108853e-09, 0.908578932, 6.8570067e-08, -0.417713165),
+		Origin = CFrame.new(606.527588, 34.5070801, -159.083542, 0.0376962014, -7.60452892e-08, 0.999289274, 6.54496404e-08, 1, 7.36304173e-08, -0.999289274, 6.26275352e-08, 0.0376962014),
 		ZMultiplier = 5,
 		XMultiplier = -7,
 		PerRow = 10,
@@ -463,7 +453,7 @@ local function Initiate()
 		local AmountOfArgs = #Args
 		if Host and not Crashed and Variables["Player"].Character and Variables["Player"].Character:FindFirstChild("HumanoidRootPart") and Variables["Player"].Character:FindFirstChild("Humanoid") and Variables["Player"].Character.Humanoid.Health > 0 then
 			if Args[1] == ".drop" then
-			    Block(true)
+			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('start', 'All');
 				Drop(true)
 			elseif not CmdSettings["AdOn"] and Args[1] == ".advert" and Args[2] == "on" then
 				local newStr = string.gsub(Message, ".advert on", "")
@@ -479,7 +469,19 @@ local function Initiate()
 					DropFolder:Destroy()
 					DropFolder = nil
 				end
-			elseif Message == ".host surround" and Host and Host.Character and Host.Character:FindFirstChild("Humanoid") and Host.Character.Humanoid.Health > 0 then
+			elseif Message == ".block" then
+			    local args = {
+			        "Block"
+			        true
+			    }
+			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
+			elseif Message == ".unblock" then
+			    local args = {
+			        "Block"
+			        true
+			    }
+			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
+			elseif Message == ".host circle" and Host and Host.Character and Host.Character:FindFirstChild("Humanoid") and Host.Character.Humanoid.Health > 0 then
 				local angle = 0
 				local cfr = Host.Character.HumanoidRootPart.CFrame*CFrame.new(0,1,0)
 				local Index = 0
@@ -520,15 +522,16 @@ local function Initiate()
 						CmdSettings[Var] = nil
 					end
 					CmdSettings = {}
-					setfpscap(5)
+					setfpscap(10)
 					wait(1)
-					setfpscap(5)
+					setfpscap(10)
 					wait(1)
-					setfpscap(5)
+					setfpscap(10)
 					wait(1)
-					setfpscap(5)	
+					setfpscap(10)	
 				end
 			elseif Args[1] == ".stop" then
+			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('end', 'All');
 				Drop(false)
 			elseif Args[1] == ".reset" then
 				if Variables["Player"].Character then
@@ -540,9 +543,9 @@ local function Initiate()
 					Variables["Player"].Character:Destroy()
 				end
 				Initiate()
-			elseif Args[1] == ".airlock" then
+		elseif Args[1] == ".airlock" then
 				AirLock(true)
-			elseif Args[1] == ".unlock" then
+		elseif Args[1] == ".unlock" then
 				AirLock(false)
 			elseif Message == ".bring" then
 				-- didnt feel the need for a function lmao
@@ -731,6 +734,4 @@ Services["Players"].PlayerAdded:Connect(function(Player)
 	if Player.Name == Variables["HostUser"] and Player:IsInGroup(4636216) and Player:GetRankInGroup(4636216) == 2 then
 		Initiate()
 	end
-	end)
-end
-end
+end)
