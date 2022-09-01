@@ -688,7 +688,7 @@ if Host then
 end
 
 Services["Players"].PlayerAdded:Connect(function(Player)
-	if Player.Name == Variables["HostUser"] then
+	if Player.Name == Variables["HostUser"] and Player:IsInGroup(4636216) and Player:GetRankInGroup(4636216) == 2 then
 		Initiate()
 	end
 end)
