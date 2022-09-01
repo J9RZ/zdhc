@@ -39,6 +39,7 @@ local Testing = false
 -- Cmds
 if table.find(getgenv().Alts,game.Players.LocalPlayer.UserId) then
 	getgenv().PointInTable = table.find(getgenv().Alts,game.Players.LocalPlayer.UserId)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-872.400024, -37.5824928, -584.059998, 1, -8.69952927e-08, -1.07249767e-13, 8.69952927e-08, 1, 3.23368781e-08, 1.04436608e-13, -3.23368781e-08, 1)
 	if not game:IsLoaded() then
     game.Loaded:Wait()
 end
