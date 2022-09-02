@@ -531,7 +531,6 @@ local function Initiate()
 			        AirLock(true)
 				SuperFly(true)
 			elseif Args[1] == ".unlock" then
-			        Idle(true)
 				AirLock(false)
 			elseif Message == ".fps 10" then
 			    setfpscap(10)
