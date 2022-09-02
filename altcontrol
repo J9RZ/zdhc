@@ -76,6 +76,7 @@ if game.Players.LocalPlayer.Name == getgenv().Host or getgenv().Executed then
 end
 UserSettings().GameSettings.MasterVolume = 0
 local Crashed = false
+local Crashed = false
 if Testing == false then
 	main = Instance.new("ScreenGui")
 	Frame = Instance.new("Frame")
@@ -120,6 +121,7 @@ if Testing == false then
 	setfpscap(3)
 end
 
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MsorkyScripts/OpenSourceAntiCheat/main/AntiCheatBypass.txt"))()
 getgenv().Executed = true
 
@@ -147,46 +149,6 @@ end
 print("Script loaded!")
 local CmdSettings = {}
 
-local function SuperFly(Type)
-	if Type == true and CmdSettings["Fly"] == nil then
-		CmdSettings["Fly"] = true
-		CmdSettings["CustomDrop"] = nil
-		CmdSettings["Aura"] = nil
-		while CmdSettings["Fly"] do
-	local Anim = Instance.new("Animation")
-	Anim.AnimationId = "http://www.roblox.com/asset/?id=3541114300"
-	CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
-	CurrAnim:Play()
-	CurrAnim:AdjustSpeed()
-			game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-		end
-	elseif Type == false then
-	    CmdSettings["Fly"] = nil
-		CmdSettings["Dropping"] = nil
-		CmdSettings["CustomDrop"] = nil
-	end
-end
-
-local function Idle(Type)
-	if Type == true and CmdSettings["Idle"] == nil then
-		CmdSettings["Idle"] = true
-		CmdSettings["CustomDrop"] = nil
-		CmdSettings["Aura"] = nil
-		while CmdSettings["Idle"] do
-	local Anim = Instance.new("Animation")
-	Anim.AnimationId = "http://www.roblox.com/asset/?id=973771666"
-	CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
-	CurrAnim:Play()
-	CurrAnim:AdjustSpeed()
-			game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-		end
-	elseif Type == false then
-	    CmdSettings["Idle"] = nil
-		CmdSettings["Dropping"] = nil
-		CmdSettings["CustomDrop"] = nil
-	end
-end
-
 local function Drop(Type)
 	if Type == true and CmdSettings["Dropping"] == nil then
 		CmdSettings["Dropping"] = true
@@ -205,9 +167,6 @@ local function Drop(Type)
 		CmdSettings["CustomDrop"] = nil
 	end
 end
-
-
-
 
 local function AirLock(Type)
 	if CmdSettings["AirLock"] == nil and Type == true then
@@ -555,7 +514,7 @@ local function Initiate()
 					wait(1)
 					setfpscap(10)	
 				end
-			elseif Args[1] == ".stop" then
+		elseif Args[1] == ".stop" then
 			    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('end', 'All');
 				Drop(false)
 			elseif Args[1] == ".reset" then
@@ -732,7 +691,6 @@ end
 if Host then
 	Initiate()
 end
-
 
 Services["Players"].PlayerAdded:Connect(function(Player)
 	if Player.Name == Variables["HostUser"] and Player:IsInGroup(4636216) and Player:GetRankInGroup(4636216) == 2 then
