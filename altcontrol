@@ -475,18 +475,6 @@ local function Initiate()
 			        [2] = false
 			    }
 			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-			elseif Message == ".ground" then
-			    local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
-game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y - 7, plrpos.Z)
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-wait(1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-
-
-			elseif Message == "unground" then 
-            local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
-game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y + 7, plrpos.Z)
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 			elseif Message == ".host circle" and Host and Host.Character and Host.Character:FindFirstChild("Humanoid") and Host.Character.Humanoid.Health > 0 then
 				local angle = 0
 				local cfr = Host.Character.HumanoidRootPart.CFrame*CFrame.new(0,1,0)
