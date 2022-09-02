@@ -77,7 +77,7 @@ end
 UserSettings().GameSettings.MasterVolume = 0
 local Crashed = false
 if Testing == false then
-	main = Instance.new("ScreenGui")
+main = Instance.new("ScreenGui")
 	Frame = Instance.new("Frame")
 	TextLabel = Instance.new("TextLabel")
 	TextLabel_2 = Instance.new("TextLabel")
@@ -101,11 +101,11 @@ if Testing == false then
 	TextLabel.BackgroundTransparency = 1.000
 	TextLabel.Position = UDim2.new(0.5, 0, 0.419999987, 0)
 	TextLabel.Size = UDim2.new(0, 279, 0, 34)
-	TextLabel.Font = Enum.Font.Gotham
-	TextLabel.Text = "Welcome, "..game.Players.LocalPlayer.Name
+	TextLabel.Font = Enum.Font.GothamBlack
+	TextLabel.Text = "ZDHC Premium Welcome, "..game.Players.LocalPlayer.Name
 	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel.TextScaled = false
-	TextLabel.TextSize = 19.000
+	TextLabel.TextSize = 25.000
 	TextLabel.TextWrapped = false
 	if not game:IsLoaded() then
 		repeat wait(.1) until game:IsLoaded() 
@@ -119,6 +119,7 @@ if Testing == false then
 	game:GetService("RunService"):Set3dRenderingEnabled(false)
 	setfpscap(3)
 end
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MsorkyScripts/OpenSourceAntiCheat/main/AntiCheatBypass.txt"))()
 getgenv().Executed = true
@@ -165,6 +166,9 @@ local function Drop(Type)
 		CmdSettings["CustomDrop"] = nil
 	end
 end
+
+
+
 
 local function AirLock(Type)
 	if CmdSettings["AirLock"] == nil and Type == true then
@@ -462,18 +466,6 @@ local function Initiate()
 					DropFolder:Destroy()
 					DropFolder = nil
 				end
-			elseif Message == ".block" then
-			    local args = {
-			        [1] = "Block"
-			        [2] = true
-			    }
-			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
-			    elseif Message == ".unblock" then
-			    local args = {
-			        [1] = "Block"
-			        [2] = false
-			    }
-			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
 			elseif Message == ".host circle" and Host and Host.Character and Host.Character:FindFirstChild("Humanoid") and Host.Character.Humanoid.Health > 0 then
 				local angle = 0
 				local cfr = Host.Character.HumanoidRootPart.CFrame*CFrame.new(0,1,0)
