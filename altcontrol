@@ -280,8 +280,8 @@ local BringLocations = {
 local SetupsTable = {
 	Bank = {
 		Origin = CFrame.new(-386.826202, 21.2503242, -325.340912, 0.998742342, 0, -0.0501373149, 0, 1, 0, 0.0501373149, 0, 0.998742342)*CFrame.new(0,0,-3),
-		ZMultiplier = 3,
-		XMultiplier = 8,
+		ZMultiplier = 10,
+		XMultiplier = 10,
 		PerRow = 10,
 		Rows = 4,
 	},
@@ -294,17 +294,17 @@ local SetupsTable = {
 	},
 	Club = {
 		Origin = CFrame.new(-282.995026, -6.20834732, -399.547882, 0.99999696, -6.7942409e-08, 0.00247257203, 6.79165311e-08, 1, 1.05499378e-08, -0.00247257203, -1.03819771e-08, 0.99999696),
-		ZMultiplier = 6,
+		ZMultiplier = 10,
 		XMultiplier = -12,
 		PerRow = 10,
 		Rows = 4,
 	},
 	School = {
 		Origin = CFrame.new(-649.818726, 21.2499924, 207.24736, -0.999973357, -1.10295337e-08, -0.0072997543, -1.11321805e-08, 1, 1.40211371e-08, 0.0072997543, 1.41020262e-08, -0.999973357),
-		ZMultiplier = 4,
-		XMultiplier = 9,
+		ZMultiplier = 15,
+		XMultiplier = 15,
 		PerRow = 10,
-		Rows = 4,
+		Rows = 6,
 },
 }
 local function Setup(Type,Debugmode)
@@ -580,7 +580,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				Setup("Bank")
 			elseif Message == ".setup admin" then
 				Setup("Admin")
-			elseif Message == ".setup Club" then
+			elseif Message == ".setup club" then
 				Setup("Club")
 			elseif Message == ".setup school" then
 				Setup("School")
