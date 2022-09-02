@@ -463,9 +463,23 @@ local function Initiate()
 					DropFolder:Destroy()
 					DropFolder = nil
 				end
+			elseif Message == ".block" then
+			    local args = {
+			        [1] = "Block"
+			        [2] = true
+			    }
+			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
+			    elseif Message == ".unblock" then
+			    local args = {
+			        [1] = "Block"
+			        [2] = false
+			    }
+			    game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
 			elseif Message == ".ground" then
 			    local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
 game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y - 7, plrpos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 
 
@@ -580,7 +594,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				Setup("Bank")
 			elseif Message == ".setup admin" then
 				Setup("Admin")
-			elseif Message == ".setup club" then
+			elseif Message == ".setup Club" then
 				Setup("Club")
 			elseif Message == ".setup school" then
 				Setup("School")
