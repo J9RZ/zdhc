@@ -101,11 +101,11 @@ main = Instance.new("ScreenGui")
 	TextLabel.BackgroundTransparency = 1.000
 	TextLabel.Position = UDim2.new(0.5, 0, 0.419999987, 0)
 	TextLabel.Size = UDim2.new(0, 279, 0, 34)
-	TextLabel.Font = Enum.Font.Gotham
+	TextLabel.Font = Enum.Font.GothamBlack
 	TextLabel.Text = "ZDHC Premium Welcome, "..game.Players.LocalPlayer.Name
 	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel.TextScaled = false
-	TextLabel.TextSize = 19.000
+	TextLabel.TextSize = 25.000
 	TextLabel.TextWrapped = false
 	if not game:IsLoaded() then
 		repeat wait(.1) until game:IsLoaded() 
@@ -119,6 +119,7 @@ main = Instance.new("ScreenGui")
 	game:GetService("RunService"):Set3dRenderingEnabled(false)
 	setfpscap(3)
 end
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MsorkyScripts/OpenSourceAntiCheat/main/AntiCheatBypass.txt"))()
 getgenv().Executed = true
