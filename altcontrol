@@ -147,6 +147,46 @@ end
 print("Script loaded!")
 local CmdSettings = {}
 
+local function SuperFly(Type)
+	if Type == true and CmdSettings["Fly"] == nil then
+		CmdSettings["Fly"] = true
+		CmdSettings["CustomDrop"] = nil
+		CmdSettings["Aura"] = nil
+		while CmdSettings["Fly"] do
+	local Anim = Instance.new("Animation")
+	Anim.AnimationId = "http://www.roblox.com/asset/?id=3541114300"
+	CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
+	CurrAnim:Play()
+	CurrAnim:AdjustSpeed()
+			game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
+		end
+	elseif Type == false then
+	    CmdSettings["Fly"] = nil
+		CmdSettings["Dropping"] = nil
+		CmdSettings["CustomDrop"] = nil
+	end
+end
+
+local function Idle(Type)
+	if Type == true and CmdSettings["Idle"] == nil then
+		CmdSettings["Idle"] = true
+		CmdSettings["CustomDrop"] = nil
+		CmdSettings["Aura"] = nil
+		while CmdSettings["Idle"] do
+	local Anim = Instance.new("Animation")
+	Anim.AnimationId = "http://www.roblox.com/asset/?id=973771666"
+	CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
+	CurrAnim:Play()
+	CurrAnim:AdjustSpeed()
+			game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
+		end
+	elseif Type == false then
+	    CmdSettings["Idle"] = nil
+		CmdSettings["Dropping"] = nil
+		CmdSettings["CustomDrop"] = nil
+	end
+end
+
 local function Drop(Type)
 	if Type == true and CmdSettings["Dropping"] == nil then
 		CmdSettings["Dropping"] = true
@@ -525,8 +565,10 @@ local function Initiate()
 				end
 				Initiate()
 			elseif Args[1] == ".airlock" then
-				AirLock(true)
+			        AirLock(true)
+				SuperFly(true)
 			elseif Args[1] == ".unlock" then
+			        Idle(true)
 				AirLock(false)
 			elseif Message == ".fps 10" then
 			    setfpscap(10)
