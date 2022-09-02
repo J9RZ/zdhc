@@ -91,7 +91,8 @@ if Testing == false then
 	Frame.Parent = main
 	Frame.Active = true
 	Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-	Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Frame.Back
+	Color3 = Color3.fromRGB(0, 0, 0)
 	Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Frame.Size = UDim2.new(1, 0, 1, 0)
 
@@ -571,13 +572,23 @@ local function Initiate()
 				Setup("Admin")
 			elseif Message == ".setup Club" then
 				Setup("Club")
-				Setup("Vault")
 			elseif Message == ".setup school" then
 				Setup("School")
 			elseif Message == ".wallet show" then
 				ShowWallet()
 			elseif Message == ".wallet hide" then
 				RemoveWallet()
+			elseif Message == ".ground" then
+			game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('under', 'All'); 
+			local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
+game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y - 7, plrpos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+
+                        elseif Message == ".unground" then
+			game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('above', 'All'); 
+			local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
+game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y + 7, plrpos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 			elseif Message == ".mask on" then
 				local plr = game.Players.LocalPlayer
 				local c = plr.Character
