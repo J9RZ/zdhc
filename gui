@@ -454,9 +454,9 @@ TextBox.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 TextBox.BorderColor3 = Color3.fromRGB(20, 20, 20)
 TextBox.Position = UDim2.new(0.364089787, 0, 0.607572913, 0)
 TextBox.Size = UDim2.new(0, 125, 0, 46)
-TextBox.Font = Enum.Font.SourceSans
+TextBox.Font = Enum.Font.GothamBlack
 TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextColor3 = Color3.fromRGB(255,255,255)
 TextBox.TextSize = 14.000
 
 TextButton_2.Parent = MainTab
@@ -584,7 +584,7 @@ local function LVWW_fake_script() -- TextBox.LocalScript
 	end)
 end
 coroutine.wrap(LVWW_fake_script)()
-local function IMQI_fake_script() -- TextButton.LocalScript 
+local function IMQI_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local GoToButton = script.Parent
