@@ -37,7 +37,7 @@ for i, e in pairs(l:GetChildren()) do
 end
 local Testing = false
 -- Cmds
-if table.find(getgenv().Alts,game.Players.LocalPlayer.UserId) then
+if table.find(getgenv().Alts['Alt1'] == game.Players.LocalPlayer.UserId) then
 	getgenv().PointInTable = table.find(getgenv().Alts,game.Players.LocalPlayer.UserId)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-872.400024, -37.5824928, -584.059998, 1, -8.69952927e-08, -1.07249767e-13, 8.69952927e-08, 1, 3.23368781e-08, 1.04436608e-13, -3.23368781e-08, 1)
 	if not game:IsLoaded() then
@@ -75,7 +75,6 @@ if game.Players.LocalPlayer.Name == getgenv().Host or getgenv().Executed then
 	return
 end
 UserSettings().GameSettings.MasterVolume = 0
-local Crashed = false
 local Crashed = false
 if Testing == false then
 	main = Instance.new("ScreenGui")
