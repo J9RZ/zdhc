@@ -1,0 +1,716 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local CrashTab = Instance.new("Frame")
+local SwagBorder = Instance.new("TextLabel")
+local Swagmode = Instance.new("TextButton")
+local EncryptBorder = Instance.new("TextLabel")
+local Encrypt = Instance.new("TextButton")
+local CPUTAB = Instance.new("Frame")
+local FPS5 = Instance.new("TextButton")
+local LowGFX = Instance.new("TextButton")
+local MapDestroy = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local FPS30 = Instance.new("TextButton")
+local FPS15 = Instance.new("TextButton")
+local info = Instance.new("TextLabel")
+local MainTab = Instance.new("Frame")
+local Drop = Instance.new("TextButton")
+local Stop = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local School = Instance.new("TextButton")
+local Bank = Instance.new("TextButton")
+local Admin = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local TextButton_2 = Instance.new("TextButton")
+local HomeTab = Instance.new("Frame")
+local Welcome = Instance.new("TextLabel")
+local Nicce = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local SideTab = Instance.new("TextLabel")
+local ImageButton = Instance.new("ImageButton")
+local ImageButton2 = Instance.new("ImageButton")
+local CPU = Instance.new("TextButton")
+local Crash = Instance.new("TextButton")
+local Home = Instance.new("TextButton")
+local Main = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame.BorderColor3 = Color3.fromRGB(35, 35, 35)
+Frame.Position = UDim2.new(0.0969827622, 0, 0.162976086, 0)
+Frame.Size = UDim2.new(0, 415, 0, 272)
+Frame.Active = true
+Frame.Draggable = true
+
+CrashTab.Name = "CrashTab"
+CrashTab.Parent = Frame
+CrashTab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+CrashTab.BorderColor3 = Color3.fromRGB(35, 35, 35)
+CrashTab.Size = UDim2.new(0, 415, 0, 272)
+
+SwagBorder.Name = "SwagBorder"
+SwagBorder.Parent = CrashTab
+SwagBorder.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+SwagBorder.BorderColor3 = Color3.fromRGB(20, 20, 20)
+SwagBorder.Position = UDim2.new(0.271820426, 0, 0.224409446, 0)
+SwagBorder.Size = UDim2.new(0, 205, 0, 73)
+SwagBorder.Font = Enum.Font.GothamBlack
+SwagBorder.Text = ""
+SwagBorder.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwagBorder.TextSize = 14.000
+
+Swagmode.Name = "Swagmode"
+Swagmode.Parent = SwagBorder
+Swagmode.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Swagmode.BorderColor3 = Color3.fromRGB(35, 35, 35)
+Swagmode.Position = UDim2.new(0.157479212, 0, 0.191780835, 0)
+Swagmode.Size = UDim2.new(0, 137, 0, 45)
+Swagmode.Font = Enum.Font.GothamBlack
+Swagmode.Text = "Swag Crash"
+Swagmode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Swagmode.TextSize = 14.000
+Swagmode.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+end)
+
+EncryptBorder.Name = "EncryptBorder"
+EncryptBorder.Parent = CrashTab
+EncryptBorder.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+EncryptBorder.BorderColor3 = Color3.fromRGB(20, 20, 20)
+EncryptBorder.Position = UDim2.new(0.271820426, 0, 0.610236287, 0)
+EncryptBorder.Size = UDim2.new(0, 205, 0, 73)
+EncryptBorder.Font = Enum.Font.GothamBlack
+EncryptBorder.Text = ""
+EncryptBorder.TextColor3 = Color3.fromRGB(255, 255, 255)
+EncryptBorder.TextSize = 14.000
+
+Encrypt.Name = "Encrypt"
+Encrypt.Parent = EncryptBorder
+Encrypt.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Encrypt.BorderColor3 = Color3.fromRGB(35, 35, 35)
+Encrypt.Position = UDim2.new(0.157479212, 0, 0.191780835, 0)
+Encrypt.Size = UDim2.new(0, 137, 0, 45)
+Encrypt.Font = Enum.Font.GothamBlack
+Encrypt.Text = "Encrypt"
+Encrypt.TextColor3 = Color3.fromRGB(255, 255, 255)
+Encrypt.TextSize = 14.000
+Encrypt.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LPrandom/lua-projects/master/dahoodcrasher.lua"))()
+end)
+
+CPUTAB.Name = "CPUTAB"
+CPUTAB.Parent = Frame
+CPUTAB.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+CPUTAB.BorderColor3 = Color3.fromRGB(35, 35, 35)
+CPUTAB.Size = UDim2.new(0, 415, 0, 272)
+
+FPS5.Name = "FPS5"
+FPS5.Parent = CPUTAB
+FPS5.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+FPS5.BorderColor3 = Color3.fromRGB(20, 20, 20)
+FPS5.Position = UDim2.new(0.0947630852, 0, 0.11811024, 0)
+FPS5.Size = UDim2.new(0, 102, 0, 41)
+FPS5.Font = Enum.Font.GothamBlack
+FPS5.Text = "5 FPS"
+FPS5.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS5.TextSize = 14.000
+FPS5.MouseButton1Down:connect(function()
+	setfpscap(5)
+end)
+
+LowGFX.Name = "LowGFX"
+LowGFX.Parent = CPUTAB
+LowGFX.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+LowGFX.BorderColor3 = Color3.fromRGB(20, 20, 20)
+LowGFX.Position = UDim2.new(0.0947631001, 0, 0.393700808, 0)
+LowGFX.Size = UDim2.new(0, 102, 0, 41)
+LowGFX.Font = Enum.Font.GothamBlack
+LowGFX.Text = "LowGFX"
+LowGFX.TextColor3 = Color3.fromRGB(255, 255, 255)
+LowGFX.TextSize = 14.000
+LowGFX.MouseButton1Down:connect(function()
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = false
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i, v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+			v.Enabled = false
+		elseif v:IsA("MeshPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+			v.TextureID = 10385902758728957
+		end
+	end
+	for i, e in pairs(l:GetChildren()) do
+		if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+			e.Enabled = false
+		end
+	end
+end)
+
+MapDestroy.Name = "MapDestroy"
+MapDestroy.Parent = CPUTAB
+MapDestroy.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MapDestroy.BorderColor3 = Color3.fromRGB(20, 20, 20)
+MapDestroy.Position = UDim2.new(0.411471307, 0, 0.393700808, 0)
+MapDestroy.Size = UDim2.new(0, 102, 0, 41)
+MapDestroy.Font = Enum.Font.GothamBlack
+MapDestroy.Text = "Destroy Map"
+MapDestroy.TextColor3 = Color3.fromRGB(255, 255, 255)
+MapDestroy.TextSize = 14.000
+MapDestroy.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/halloweevn/SpookyControl/main/Source%20%3AD/CPUSaver'))()
+end)
+
+TextButton.Parent = CPUTAB
+TextButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextButton.BorderColor3 = Color3.fromRGB(20, 20, 20)
+TextButton.Position = UDim2.new(0.713216901, 0, 0.393700778, 0)
+TextButton.Size = UDim2.new(0, 102, 0, 41)
+TextButton.Font = Enum.Font.GothamBlack
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+
+FPS30.Name = "FPS30"
+FPS30.Parent = CPUTAB
+FPS30.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+FPS30.BorderColor3 = Color3.fromRGB(20, 20, 20)
+FPS30.Position = UDim2.new(0.71321696, 0, 0.11811024, 0)
+FPS30.Size = UDim2.new(0, 102, 0, 41)
+FPS30.Font = Enum.Font.GothamBlack
+FPS30.Text = "30 FPS"
+FPS30.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS30.TextSize = 14.000
+FPS30.MouseButton1Down:connect(function()
+	setfpscap(30)
+end)
+
+FPS15.Name = "FPS15"
+FPS15.Parent = CPUTAB
+FPS15.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+FPS15.BorderColor3 = Color3.fromRGB(20, 20, 20)
+FPS15.Position = UDim2.new(0.411471337, 0, 0.11811024, 0)
+FPS15.Size = UDim2.new(0, 102, 0, 41)
+FPS15.Font = Enum.Font.GothamBlack
+FPS15.Text = "15 FPS"
+FPS15.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS15.TextSize = 14.000
+FPS15.MouseButton1Down:connect(function()
+	setfpscap(15)
+end)
+
+info.Name = "info"
+info.Parent = CPUTAB
+info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+info.BackgroundTransparency = 1.000
+info.Position = UDim2.new(0.411471307, 0, 0.665354311, 0)
+info.Size = UDim2.new(0, 102, 0, 50)
+info.Font = Enum.Font.GothamBlack
+info.Text = ".gg/zdhc"
+info.TextColor3 = Color3.fromRGB(255, 255, 255)
+info.TextSize = 14.000
+
+MainTab.Name = "MainTab"
+MainTab.Parent = Frame
+MainTab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+MainTab.BorderColor3 = Color3.fromRGB(35, 35, 35)
+MainTab.Size = UDim2.new(0, 415, 0, 272)
+
+Drop.Name = "Drop"
+Drop.Parent = MainTab
+Drop.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Drop.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Drop.Position = UDim2.new(0.394014984, 0, 0.11811024, 0)
+Drop.Size = UDim2.new(0, 102, 0, 41)
+Drop.Font = Enum.Font.GothamBlack
+Drop.Text = "Drop"
+Drop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Drop.TextSize = 14.000
+Drop.MouseButton1Down:connect(function()
+	---// Start Loop Drop Source
+	_G.Drop = true;
+	while _G.Drop == true do
+		wait()
+		game.ReplicatedStorage.MainEvent:FireServer("DropMoney", "10000")
+	end
+
+end)
+
+Stop.Name = "Stop"
+Stop.Parent = MainTab
+Stop.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Stop.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Stop.Position = UDim2.new(0.69077307, 0, 0.11811024, 0)
+Stop.Size = UDim2.new(0, 102, 0, 41)
+Stop.Font = Enum.Font.GothamBlack
+Stop.Text = "Stop"
+Stop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stop.TextSize = 14.000
+Stop.MouseButton1Down:connect(function()
+	---// Stop Loop Drop Source
+	_G.Drop = false;
+	while _G.Drop == true do
+		wait()
+		game.ReplicatedStorage.MainEvent:FireServer("DropMoney", "10000")
+	end
+
+end)
+
+Fly.Name = "Fly"
+Fly.Parent = MainTab
+Fly.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Fly.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Fly.Position = UDim2.new(0.0947631076, 0, 0.11811024, 0)
+Fly.Size = UDim2.new(0, 102, 0, 41)
+Fly.Font = Enum.Font.GothamBlack
+Fly.Text = "Fly [C]"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextSize = 14.000
+Fly.MouseButton1Down:connect(function()
+	FLYSPEED = 15
+
+	-- ok
+
+	local plr = game.Players.LocalPlayer
+	local Humanoid = plr.Character:FindFirstChildWhichIsA('Humanoid')
+	local mouse = plr:GetMouse()
+	localplayer = plr
+	if workspace:FindFirstChild("Core") then
+		workspace.Core:Destroy()
+	end
+	local Core = Instance.new("Part")
+	Core.Name = "Core"
+	Core.Size = Vector3.new(0.05, 0.05, 0.05)
+	spawn(function()
+		Core.Parent = workspace
+		local Weld = Instance.new("Weld", Core)
+		Weld.Part0 = Core
+		Weld.Part1 = localplayer.Character.LowerTorso
+		Weld.C0 = CFrame.new(0, 0, 0)
+	end)
+	workspace:WaitForChild("Core")
+	local torso = workspace.Core
+	flying = true
+	local speed=FLYSPEED
+	local keys={a=false,d=false,w=false,s=false}
+	local e1
+	local e2
+	local function start()
+		local pos = Instance.new("BodyPosition",torso)
+		local gyro = Instance.new("BodyGyro",torso)
+		pos.Name="EPIXPOS"
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		pos.position = torso.Position
+		gyro.maxTorque = Vector3.new(15e15, 15e15, 15e15)
+		gyro.cframe = torso.CFrame
+		repeat
+			wait()
+			Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+				speed=FLYSPEED
+			end
+			if keys.w then
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed
+			end
+			if keys.s then
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed
+			end
+			if keys.d then
+				new = new * CFrame.new(speed,0,0)
+				speed=speed
+			end
+			if keys.a then
+				new = new * CFrame.new(-speed,0,0)
+				speed=speed
+			end
+			if speed>FLYSPEED then
+				speed=FLYSPEED
+			end
+			pos.position=new.p
+			if keys.w then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed),0,0)
+			elseif keys.s then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed),0,0)
+			else
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		until flying == false
+		if gyro then gyro:Destroy() end
+		if pos then pos:Destroy() end
+		flying=false
+		Humanoid.PlatformStand=false
+		speed=FLYSPEED
+	end
+	e1=mouse.KeyDown:connect(function(key)
+		if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+		if key=="w" then
+			keys.w=true
+		elseif key=="s" then
+			keys.s=true
+		elseif key=="a" then
+			keys.a=true
+		elseif key=="d" then
+			keys.d=true
+		elseif key=="c" then
+			if flying==true then
+				flying=false
+			else
+				flying=true
+				start()
+			end
+		end
+	end)
+	e2=mouse.KeyUp:connect(function(key)
+		if key=="w" then
+			keys.w=false
+		elseif key=="s" then
+			keys.s=false
+		elseif key=="a" then
+			keys.a=false
+		elseif key=="d" then
+			keys.d=false
+		end
+	end)
+	start()
+end)
+
+School.Name = "School"
+School.Parent = MainTab
+School.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+School.BorderColor3 = Color3.fromRGB(20, 20, 20)
+School.Position = UDim2.new(0.690689027, 0, 0.39367184, 0)
+School.Size = UDim2.new(0, 102, 0, 41)
+School.Font = Enum.Font.GothamBlack
+School.Text = "School"
+School.TextColor3 = Color3.fromRGB(255, 255, 255)
+School.TextSize = 14.000
+School.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-680.161987, 21.7480183, 238.996002, 0.999940932, -1.03277804e-08, -0.0108703291, 1.09068363e-08, 1, 5.32101083e-08, 0.0108703291, -5.33255253e-08, 0.999940932)
+end)
+
+Bank.Name = "Bank"
+Bank.Parent = MainTab
+Bank.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Bank.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Bank.Position = UDim2.new(0.394014984, 0, 0.39367184, 0)
+Bank.Size = UDim2.new(0, 102, 0, 41)
+Bank.Font = Enum.Font.GothamBlack
+Bank.Text = "Bank"
+Bank.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bank.TextSize = 14.000
+Bank.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-377.864441, 21.2499943, -353.574799, 0.99999994, 5.13736076e-08, 0.000373064715, -5.13650917e-08, 1, -2.28348203e-08, -0.000373064715, 2.28156551e-08, 0.99999994)
+end)
+
+Admin.Name = "Admin"
+Admin.Parent = MainTab
+Admin.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Admin.BorderColor3 = Color3.fromRGB(20, 20, 20)
+Admin.Position = UDim2.new(0.0923534632, 0, 0.39367184, 0)
+Admin.Size = UDim2.new(0, 102, 0, 41)
+Admin.Font = Enum.Font.GothamBlack
+Admin.Text = "Admin"
+Admin.TextColor3 = Color3.fromRGB(255, 255, 255)
+Admin.TextSize = 14.000
+Admin.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-871.531372, -32.6492119, -655.763855, 0.99982965, 8.19479595e-08, -0.0184579957, -8.21120594e-08, 1, -8.13280376e-09, 0.0184579957, 9.64704228e-09, 0.99982965)
+end)
+
+TextBox.Parent = MainTab
+TextBox.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextBox.BorderColor3 = Color3.fromRGB(20, 20, 20)
+TextBox.Position = UDim2.new(0.364089787, 0, 0.607572913, 0)
+TextBox.Size = UDim2.new(0, 125, 0, 46)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+TextButton_2.Parent = MainTab
+TextButton_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderColor3 = Color3.fromRGB(20, 20, 20)
+TextButton_2.Position = UDim2.new(0.364089787, 0, 0.823529422, 0)
+TextButton_2.Size = UDim2.new(0, 129, 0, 34)
+TextButton_2.Font = Enum.Font.GothamBlack
+TextButton_2.Text = "Teleport"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+
+HomeTab.Name = "HomeTab"
+HomeTab.Parent = Frame
+HomeTab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+HomeTab.BorderColor3 = Color3.fromRGB(35, 35, 35)
+HomeTab.Size = UDim2.new(0, 415, 0, 272)
+
+Welcome.Name = "Welcome"
+Welcome.Parent = HomeTab
+Welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Welcome.BackgroundTransparency = 1.000
+Welcome.Position = UDim2.new(0.257831335, 0, 0.591911733, 0)
+Welcome.Size = UDim2.new(0, 200, 0, 50)
+Welcome.Font = Enum.Font.GothamBlack
+Welcome.Text = "Welcome, User"
+Welcome.TextColor3 = Color3.fromRGB(255, 255, 255)
+Welcome.TextSize = 14.000
+
+Nicce.Name = "Nicce"
+Nicce.Parent = HomeTab
+Nicce.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Nicce.BackgroundTransparency = 1.000
+Nicce.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Nicce.Position = UDim2.new(0.378313273, 0, 0.176470593, 0)
+Nicce.Size = UDim2.new(0, 100, 0, 100)
+Nicce.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner.CornerRadius = UDim.new(0, 98)
+UICorner.Parent = Nicce
+
+SideTab.Name = "SideTab"
+SideTab.Parent = Frame
+SideTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+SideTab.BorderColor3 = Color3.fromRGB(20, 20, 20)
+SideTab.Position = UDim2.new(-0.00027403314, 0, 0.00393699203, 0)
+SideTab.Size = UDim2.new(0, 132, 0, 270)
+SideTab.Font = Enum.Font.SourceSans
+SideTab.Text = ""
+SideTab.TextColor3 = Color3.fromRGB(0, 0, 0)
+SideTab.TextSize = 14.000
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Size = UDim2.new(0, 33, 0, 24)
+ImageButton.Image = "http://www.roblox.com/asset/?id=10782455936"
+ImageButton.ScaleType = Enum.ScaleType.Fit
+
+ImageButton2.Name = "ImageButton2"
+ImageButton2.Parent = Frame
+ImageButton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton2.BackgroundTransparency = 1.000
+ImageButton2.Size = UDim2.new(0, 33, 0, 24)
+ImageButton2.Image = "http://www.roblox.com/asset/?id=10782455936"
+ImageButton2.ScaleType = Enum.ScaleType.Fit
+
+CPU.Name = "CPU"
+CPU.Parent = Frame
+CPU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CPU.BackgroundTransparency = 1.000
+CPU.Position = UDim2.new(0.050090421, 0, 0.542786002, 0)
+CPU.Size = UDim2.new(0, 89, 0, 45)
+CPU.Font = Enum.Font.GothamBlack
+CPU.Text = "CPU"
+CPU.TextColor3 = Color3.fromRGB(255, 255, 255)
+CPU.TextSize = 14.000
+
+Crash.Name = "Crash"
+Crash.Parent = Frame
+Crash.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crash.BackgroundTransparency = 1.000
+Crash.Position = UDim2.new(0.0499959514, 0, 0.740678549, 0)
+Crash.Size = UDim2.new(0, 89, 0, 45)
+Crash.Font = Enum.Font.GothamBlack
+Crash.Text = "Crash"
+Crash.TextColor3 = Color3.fromRGB(255, 255, 255)
+Crash.TextSize = 14.000
+
+Home.Name = "Home"
+Home.Parent = Frame
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.Position = UDim2.new(0.0500904135, 0, 0.150127366, 0)
+Home.Size = UDim2.new(0, 89, 0, 45)
+Home.Font = Enum.Font.GothamBlack
+Home.Text = "Home"
+Home.TextColor3 = Color3.fromRGB(255, 255, 255)
+Home.TextSize = 14.000
+
+Main.Name = "Main"
+Main.Parent = Frame
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.0428614989, 0, 0.350669712, 0)
+Main.Size = UDim2.new(0, 89, 0, 45)
+Main.Font = Enum.Font.GothamBlack
+Main.Text = "Main"
+Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main.TextSize = 14.000
+
+-- Scripts:
+local function LVWW_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	local TargetInput = script.Parent
+
+	TargetInput.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if (string.sub(string.lower(v.Name),1,string.len(TargetInput.Text))) == string.lower(TargetInput.Text) then
+				TargetInput.Text = v.Name
+			end
+		end
+	end)
+end
+coroutine.wrap(LVWW_fake_script)()
+local function IMQI_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local GoToButton = script.Parent
+	local TargetInput = script.Parent.Parent
+	local plr = game.Players.LocalPlayer
+
+	GoToButton.MouseButton1Click:Connect(function()
+		if TargetInput.Text ~= "" then 
+			if game:GetService("Players"):FindFirstChild(TargetInput.Text) then 
+				plr.Character:FindFirstChild("HumanoidRootPart").CFrame = game:GetService("Players"):FindFirstChild(TargetInput.Text).Character.Head.CFrame 
+			end
+		end
+	end)
+end
+coroutine.wrap(IMQI_fake_script)()
+
+
+local function XRBZ_fake_script() -- Welcome.LocalScript 
+	local script = Instance.new('LocalScript', Welcome)
+
+	
+	local player = game.Players.LocalPlayer
+	
+	if player then
+		script.Parent.Text = "Welcome, "..player.Name..""
+	end
+end
+coroutine.wrap(XRBZ_fake_script)()
+local function UKZKOV_fake_script() -- Nicce.LocalScript 
+	local script = Instance.new('LocalScript', Nicce)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+end
+coroutine.wrap(UKZKOV_fake_script)()
+local function XMTOPNS_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.ImageButton2.Visible = true
+		script.Parent.Parent.SideTab.Visible = true
+		script.Parent.Parent.CPU.Visible = true
+		script.Parent.Parent.Crash.Visible = true
+		script.Parent.Parent.Home.Visible = true
+		script.Parent.Parent.Main.Visible = true
+		script.Parent.Parent.ImageButton.Visible = false
+	end)
+end
+coroutine.wrap(XMTOPNS_fake_script)()
+local function EWYNCW_fake_script() -- ImageButton2.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton2)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.ImageButton2.Visible = false
+		script.Parent.Parent.SideTab.Visible = false
+		script.Parent.Parent.CPU.Visible = false
+		script.Parent.Parent.Crash.Visible = false
+		script.Parent.Parent.Home.Visible = false
+		script.Parent.Parent.Main.Visible = false
+		script.Parent.Parent.ImageButton.Visible = true
+	end)
+end
+coroutine.wrap(EWYNCW_fake_script)()
+local function FDSL_fake_script() -- CPU.LocalScript 
+	local script = Instance.new('LocalScript', CPU)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.HomeTab.Visible = false
+		script.Parent.Parent.MainTab.Visible = false
+		script.Parent.Parent.CPUTAB.Visible = true
+		script.Parent.Parent.CrashTab.Visible = false
+	end)
+end
+coroutine.wrap(FDSL_fake_script)()
+local function TVPADGP_fake_script() -- Crash.LocalScript 
+	local script = Instance.new('LocalScript', Crash)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.HomeTab.Visible = false
+		script.Parent.Parent.MainTab.Visible = false
+		script.Parent.Parent.CPUTAB.Visible = false
+		script.Parent.Parent.CrashTab.Visible = true
+	end)
+end
+coroutine.wrap(TVPADGP_fake_script)()
+local function ZJKIWIN_fake_script() -- Home.LocalScript 
+	local script = Instance.new('LocalScript', Home)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.HomeTab.Visible = true
+		script.Parent.Parent.MainTab.Visible = false
+		script.Parent.Parent.CPUTAB.Visible = false
+		script.Parent.Parent.CrashTab.Visible = false
+	end)
+end
+coroutine.wrap(ZJKIWIN_fake_script)()
+local function KOKXKMU_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.HomeTab.Visible = false
+		script.Parent.Parent.MainTab.Visible = true
+		script.Parent.Parent.CPUTAB.Visible = false
+		script.Parent.Parent.CrashTab.Visible = false
+	end)
+end
+coroutine.wrap(KOKXKMU_fake_script)()
+local function UNTMMM_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local HotKey = Enum.KeyCode.M-- Key to open Gui --
+	local UIS = game:GetService("UserInputService")
+	
+	UIS.InputBegan:Connect(function(Key)
+		if Key.KeyCode == HotKey then
+			script.Parent.Visible = not script.Parent.Visible
+		end
+	end)
+end
+coroutine.wrap(UNTMMM_fake_script)()
