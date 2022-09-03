@@ -189,7 +189,7 @@ MapDestroy.Text = "Destroy Map"
 MapDestroy.TextColor3 = Color3.fromRGB(255, 255, 255)
 MapDestroy.TextSize = 14.000
 MapDestroy.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/halloweevn/SpookyControl/main/Source%20%3AD/CPUSaver'))()
+print("not working")
 end)
 
 TextButton.Parent = CPUTAB
