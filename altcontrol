@@ -573,7 +573,7 @@ local function Initiate()
 			elseif Args[1] == ".unlock" then
 				AirLock(false)
 			elseif Message == ".ground" then
-			    local newPos = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y-8,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+			    local newPos = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y-6,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
 				for i=1,10 do
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = newPos
 					wait()
@@ -581,13 +581,11 @@ local function Initiate()
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 				
 			elseif Message == ".unground" then
-			     local newPos = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y+14,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+			     local newPos = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y+10,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
 				for i=1,10 do
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = newPos
 					wait()
 				end
-				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-				wait(1)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				
 			elseif Message == ".block" then
