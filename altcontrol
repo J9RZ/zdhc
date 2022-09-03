@@ -552,11 +552,11 @@ local function Initiate()
 				SuperFly(true)
 			elseif Args[1] == ".unlock" then
 				AirLock(false)
-			elseif Message == "ground" then
+			elseif Message == ".ground" then
 			    local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
 game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y - 7, plrpos.Z)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-			elseif Message == "unground" then
+			elseif Message == ".unground" then
 			  local plrpos = game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').Position
 game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(plrpos.X, plrpos.Y + 7, plrpos.Z)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
