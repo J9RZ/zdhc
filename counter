@@ -18,6 +18,8 @@ Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 Frame.BorderColor3 = Color3.fromRGB(35, 35, 35)
 Frame.Position = UDim2.new(0.165948272, 0, 0.248007089, 0)
 Frame.Size = UDim2.new(0, 235, 0, 101)
+Frame.Active = true
+Frame.Draggable = true
 
 ABC.Name = "ABC"
 ABC.Parent = Frame
