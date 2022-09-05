@@ -329,8 +329,8 @@ local SetupsTable = {
 	},
 	Admin = {
 		Origin = CFrame.new(-896.338196, -38.5824928, -625.488464, 0.999992192, -2.28345769e-08, -0.00395107409, 2.3222773e-08, 1, 9.82049499e-08, 0.00395107409, -9.82959421e-08, 0.999992192),
-		ZMultiplier = 10,
-		XMultiplier = 15,
+		ZMultiplier = 3,
+		XMultiplier = 8,
 		PerRow = 6,
 		Rows = 6,
 	},
