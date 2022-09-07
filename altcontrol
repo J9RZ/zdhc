@@ -582,13 +582,13 @@ local function Initiate()
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 				
 			elseif Message == ".unground" then
-			    local newPos = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y+13,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+			    local newPos = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y+12,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
 				for i=1,10 do
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = newPos
 					wait()
 				end
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-				wait(5)
+				wait(10)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 			elseif Message == ".drop" then
 
