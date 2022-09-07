@@ -634,29 +634,37 @@ local function Initiate()
 			elseif Message == ".fps 1" then
 			    setfpscap(1)
 			elseif Message == ".bring" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				-- didnt feel the need for a function lmao
 				if Host and Host.Character and Host.Character:FindFirstChild("HumanoidRootPart") then
 					Variables["Player"].Character.HumanoidRootPart.CFrame = Host.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-1)
 				end
 			elseif Args[1] == ".bring" and Args[2] == "host" and BringLocations[string.lower(Args[3])] then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				BringPlr(Host,BringLocations[string.lower(Args[3])])
 			elseif Args[1] == ".bring" and BringLocations[string.lower(Args[3])] then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				local FoundPlayer = GetPlayerFromString(Args[2])
 				if FoundPlayer then
 					BringPlr(FoundPlayer,BringLocations[string.lower(Args[3])])
 				end
 			elseif Args[1] == ".bring" and Args[3] == "host" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				local FoundPlayer = GetPlayerFromString(Args[2])
 				if FoundPlayer then
 					BringPlr(FoundPlayer,nil)
 				end
 			elseif Message == ".setup bank" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				Setup("Bank")
 			elseif Message == ".setup admin" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 			    Setup("Admin")
 			elseif Message == ".setup club" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				Setup("Club")
 			elseif Message == ".setup school" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 				Setup("School")
 			elseif Message == ".wallet show" then
 				ShowWallet()
